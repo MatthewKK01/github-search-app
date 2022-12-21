@@ -1,38 +1,130 @@
-.App {
+h1 {
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 39px;
+  color: #222731;
+}
+a{
+  text-decoration: none;
+  all:unset
+}
+.span {
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 19px;
+  text-align: right;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: #4b6a9b;
+}
+.input-container {
+    height: 60px;
+width: 327px;
+
+  background: #fefefe;
+  box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
+  border-radius: 15px;
+}
+.input-container > input{
+    font-family: 'Space Mono';
+font-style: normal;
+font-weight: 400;
+font-size: 13px;
+line-height: 25px;
+/* identical to box height, or 192% */
+
+
+color: #4B6A9B;
+}
+button {
+    height: 46px;
+  background: #0079ff;
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 21px;
   text-align: center;
+  color: #ffffff;
+  border-radius: 10px;
+  transition: all 0.3s ease-out;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+button:hover{
+  background: #60ABFF;
 }
+input:focus{
+  border: 0;
+  outline: 0;
+}
+h2{
+  font-family: 'Space Mono';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 24px;
+text-align: center;
+text-transform: uppercase;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+color: #2B3442;
+}
+.main-container{
+  width: 327px;
+  background: #FEFEFE;
+box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
+border-radius: 15px;
+}
+h4{
+  font-family: 'Space Mono';
+font-style: normal;
+font-weight: 400;
+font-size: 15px;
+line-height: 25px;
+color: #4B6A9B;
+}
+.link{
+  font-family: 'Space Mono';
+font-style: normal;
+font-weight: 400;
+font-size: 13px;
+line-height: 19px;
+
+color: #0079FF;
+cursor: pointer;
+}
+svg{
+  display: inline;
+  margin-right: 13px;
+}
+@media screen and (min-width:375px){
+  header{
+    width: 327px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media screen and (min-width:768px){
+  .input-container{
+    width: 573px;
   }
-  to {
-    transform: rotate(360deg);
+  .main-container{
+    width: 573px;
+  }
+  header{
+    width: 573px;
+  }
+}
+@media screen and (min-width:1024px){
+  .input-container{
+    width: 730px;
+  }
+  .main-container{
+    width: 730px;
+  }
+  header{
+    width: 730px;
+    margin-bottom: 35px;
   }
 }
