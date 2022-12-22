@@ -44,8 +44,8 @@ console.log(users)
   // rendering plain html
 
   return (
-    <div className={`min-h-full p-6 md:p-24 ${dark && `bg-Bneli`}`}>
-      <header className="m-auto mb-4 flex justify-between items-center">
+    <div className={`h-full flex flex-col justify-center items-center p-6 md:p-24 ${dark && `bg-[#141D2F]`}`}>
+      <header className=" mb-4 flex justify-between items-center">
         <h1 className={`${dark && `text-white`}`}>devfinder</h1>
         <div id="theme-switcher" className="flex items-center ">
           <span className="span w-10 h-5">{dark ? `Light` : `Dark`}</span>
@@ -59,11 +59,11 @@ console.log(users)
         </div>
       </header>
 
-      <div className={`input-container m-auto flex justify-between items-center p-2 ${dark && `bg-[#1E2A47]`}`}>
+      <div className={`input-container ${dark ? `shadow-none` : `shadow-md`}  flex justify-between items-center p-2 ${dark ? `bg-big-stone-500` : `bg-white`}`}>
         <img src={search} alt="search" />
         <input
           onChange={userHandler}
-          className="w-full ml-2"
+          className={`${dark ? `bg-big-stone-500` : `bg-white` } w-full ml-2`}
           placeholder="Search GitHub username…"
           type="text"
         />
@@ -72,37 +72,37 @@ console.log(users)
         </button>
       </div>
 
-      <div className="main-container m-auto mt-4 p-6 md:p-10">
-        <div className="info  mb-8 flex items-center">
+      <div className={`main-container ${dark ? `bg-[#1E2A47] shadow-none ` : `bg-white shadow-lg`}  mt-4 p-6 md:p-10`}>
+        <div className={`info ${dark && `[&>span]:text-white`} mb-8 flex items-center`}>
           <img src={users.avatar_url} className="w-20 rounded-full inline" />
           <div className="flex ml-5 flex-col">
-            <p>{users.login}</p>
+            <p className={dark && `text-white`}>{users.login}</p>
             <a className="link" href={users.blog}>
               @{users.login}
             </a>
-            <p className="">Joined {moment(`${users.created_at}`).format("MMMM Do YYYY hh:mm:ss")}</p>
+            <p className={dark && `text-white`}>Joined {moment(`${users.created_at}`).format("MMMM Do YYYY")}</p>
           </div>
         </div>
-        <p className="mb-6">
+        <p className={`mb-6 ${dark && `text-white`}`}>
           {users.bio}
         </p>
 
-        <div className="stats mb-6 flex  bg-gray-100 gap-3 justify-between flex-row rounded-xl p-4">
-          <div className="repos flex flex-col justify-center  items-center">
+        <div className={`stats ${dark ? `bg-[#141d2fef]` : `bg-[#F6F8FF]`} mb-6 flex  bg-gray-100 gap-3 justify-between flex-row rounded-xl p-4`}>
+          <div className={`repos ${dark && `[&>h4]:text-white [&>h2]:text-white`} flex flex-col justify-center  items-center`}>
             <h4>Repos</h4>
             <h2>{users.public_repos}</h2>
           </div>
-          <div className="followers flex flex-col justify-center items-center">
+          <div className={`followers ${dark && `[&>h4]:text-white [&>h2]:text-white`} flex flex-col justify-center  items-center`}>
             <h4>Followers</h4>
             <h2>{users.followers}</h2>
           </div>
-          <div className="following flex flex-col justify-center items-center">
+          <div className={`following ${dark && `[&>h4]:text-white [&>h2]:text-white`} flex flex-col justify-center  items-center`}>
             <h4>Following</h4>
             <h2>{users.following}</h2>
           </div>
         </div>
-        <div className="more_info flex flex-col gap-4 md:grid grid-cols-2 gap-x-14 lg: gap-x-36">
-          <div className="md:order-1">
+        <div className={`more_info  flex flex-col gap-4 md:grid grid-cols-2 gap-x-14 lg:gap-x-36`}>
+          <div className={`${dark && `[&>span]:text-white`}  md:order-1`}>
             <svg height="20" width="14" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M12.797 3.425C11.584 1.33 9.427.05 7.03.002a7.483 7.483 0 00-.308 0C4.325.05 2.17 1.33.955 3.425a6.963 6.963 0 00-.09 6.88l4.959 9.077.007.012c.218.38.609.606 1.045.606.437 0 .828-.226 1.046-.606l.007-.012 4.96-9.077a6.963 6.963 0 00-.092-6.88zm-5.92 5.638c-1.552 0-2.813-1.262-2.813-2.813s1.261-2.812 2.812-2.812S9.69 4.699 9.69 6.25 8.427 9.063 6.876 9.063z"
@@ -112,7 +112,7 @@ console.log(users)
             <span>{users.location}</span>
           </div>
 
-          <div className="md:order-3">
+          <div className={`${dark && `[&>a]:text-white`}  md:order-3`}>
             <svg height="20" width="20" xmlns="http://www.w3.org/2000/svg">
               <g fill="#4b6a9b">
                 <path d="M7.404 5.012c-2.355 2.437-1.841 6.482.857 8.273.089.06.207.048.283-.027.568-.555 1.049-1.093 1.47-1.776a.213.213 0 00-.084-.3A2.743 2.743 0 018.878 10.1a2.64 2.64 0 01-.223-1.803c.168-.815 1.043-1.573 1.711-2.274l-.004-.002 2.504-2.555a2.568 2.568 0 013.648-.019 2.6 2.6 0 01.037 3.666l-1.517 1.56a.266.266 0 00-.06.273c.35 1.012.435 2.44.201 3.519-.006.03.031.05.053.028l3.228-3.295c2.062-2.105 2.044-5.531-.04-7.615a5.416 5.416 0 00-7.691.04L7.417 4.998l-.013.014z" />
@@ -122,7 +122,7 @@ console.log(users)
             <a  href={users.blog}>{users.blog}</a>
           </div>
 
-          <div className="md:order-2">
+          <div className={`${dark && `[&>span]:text-white`}  md:order-2`}>
             {" "}
             <svg height="18" width="20" xmlns="http://www.w3.org/2000/svg">
               <path
@@ -137,7 +137,7 @@ console.log(users)
             )}
           </div>
 
-          <div className="md:order-4">
+          <div className={`${dark && `[&>span]:text-white`}  md:order-4`}>
             {" "}
             <svg height="20" width="20" xmlns="http://www.w3.org/2000/svg">
               <g fill="#4b6a9b">

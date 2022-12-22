@@ -25,8 +25,7 @@ a{
     height: 60px;
 width: 327px;
 
-  background: #fefefe;
-  box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
+
   border-radius: 15px;
 }
 .input-container > input{
@@ -73,8 +72,6 @@ color: #2B3442;
 }
 .main-container{
   width: 327px;
-  background: #FEFEFE;
-box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
 border-radius: 15px;
 }
 h4{
