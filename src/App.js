@@ -17,7 +17,7 @@ function App() {
       setDark(false)
     }
   }
-
+// added some comments to fix the job
   // Mechanism to fetch API from data...
   let value;
 
