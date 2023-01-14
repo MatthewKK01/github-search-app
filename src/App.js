@@ -87,7 +87,7 @@ console.log(users)
           {users.bio}
         </p>
 
-        <div className={`stats ${dark ? `bg-[#141d2fef]` : `bg-[#F6F8FF]`} mb-6 flex  bg-gray-100 gap-3 justify-between flex-row rounded-xl p-4`}>
+        <div className={`stats ${dark ? `bg-[#141d2fef]` : `bg-[#F6F8FF]`} mb-6 flex  gap-3 justify-between flex-row rounded-xl p-4`}>
           <div className={`repos ${dark && `[&>h4]:text-white [&>h2]:text-white`} flex flex-col justify-center  items-center`}>
             <h4>Repos</h4>
             <h2>{users.public_repos}</h2>
